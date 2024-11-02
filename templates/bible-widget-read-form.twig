@@ -1,0 +1,56 @@
+{#
+# Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+# Licensed under MIT (https://opensource.org/licenses/MIT)
+#}
+<div class="row">
+	<div class="col-xs-12">
+		<div class="select form-group">
+			<label class="sr-only" for="widget-read-translation">{{ strings['/biblica/templates/rtb/widget/translationSelectLabel'] }}</label>
+			<select class="form-control refresh-trigger" name="translationid" id="widget-read-translation">
+				{% for translation in data.activeTranslations %}
+					<option {{ translation.id == data.selectedTranslation.id ? 'selected' }} value="{{ translation.id }}" data-abbreviation="{{ translation.abbreviation }}">
+						{{ translation.language.name|raw }}
+						|
+						{{ translation.name|raw }}
+						({{ translation.abbreviation }})
+					</option>
+				{% endfor %}
+			</select>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-auto">
+		<div class="select form-group">
+			<label class="sr-only" for="book">{{ strings['/biblica/templates/rtb/widget/bookSelectLabel'] }}</label>
+			<select class="form-control refresh-trigger" name="book" id="book">
+				{% for book in data.selectedTranslation.books %}
+					<option {{ book.name == data.selectedBook.name ? 'selected' }} value="{{ book.urlSegment }}">
+						{{ book.name }}
+					</option>
+				{% endfor %}
+			</select>
+		</div>
+	</div>
+	<div class="col">
+		<div class="select form-group">
+			<label class="sr-only" for="chapter">{{ strings['/biblica/templates/rtb/widget/chapterSelectLabel'] }}</label>
+			<select class="form-control" name="chapter" id="chapter">
+				{% for chapter in data.selectedBook.chapters %}
+					<option {{ chapter.name == data.selectedChapter.name ? 'selected' }} value="{{ chapter.name }}">
+						{{ chapter.name }}
+					</option>
+				{%  endfor %}
+			</select>
+		</div>
+	</div>
+	<div class="col">
+		<div class="submit form-group">
+			<button type="submit" class="btn-rounded btn-secondary" aria-label="Select book">
+				<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M8.625 5.25L15.375 12L8.625 18.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>

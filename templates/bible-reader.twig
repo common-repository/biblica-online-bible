@@ -1,0 +1,167 @@
+{#
+ # Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ # Licensed under MIT (https://opensource.org/licenses/MIT)
+ #}
+{% if data.disabledMessage != null %}
+	<div class="disabled-message">{{ data.disabledMessage }}</div>
+{% else %}
+	<div id="debugInfo" class="debug-info" style="display: none;">ip:
+		{{ data.ipAddress }}</div>
+	<div class="x-main left" role="main" style="min-height: 500px;">
+		<div id="online-bible" class="online-bible clearfix">
+			<div class="main-header">
+				{% if data.heading != '' %}
+				<h1>{{ data.heading|raw }}</h1>
+				{% endif %}
+				<div class="bible-nav clearfix">
+					<div class="books paging">
+						<a class="btn-rounded  next" href="{{ data.nextChapterLink.url }}" aria-label="{{ data.nextChapterLink.text }}">
+							<svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M9.125 5.25L15.875 12L9.125 18.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+						<a class="btn-rounded last" href="{{ data.nextBookLink.url }}" aria-label="{{ data.nextBookLink.text }}">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewbox="0 0 25 24" fill="none">
+								<path d="M13.080932341516018,5.25 L19.830932341516025,12 L13.080932341516018,18.75 " stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1"/><path d="M5.035734318196776,5.25 L11.785734318196774,12 L5.035734318196776,18.75 " stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+						<a class="btn-rounded first" href="{{ data.previousBookLink.url }}" aria-label="{{ data.previousBookLink.text }}">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewbox="0 0 25 24" fill="none">
+								<path d="M13.080932341516018,5.25 L19.830932341516025,12 L13.080932341516018,18.75 " stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1" transform="rotate(-180 16.4559326171875,11.999999999999998) "/><path d="M5.035734318196776,5.25 L11.785734318196774,12 L5.035734318196776,18.75 " stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-180 8.410734176635742,12) "/>
+							</svg>
+						</a>
+						<a class="btn-rounded  prev" href="{{ data.previousChapterLink.url }}" aria-label="{{ data.previousChapterLink.text }}">
+							<svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.875 18.75L9.125 12L15.875 5.25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+
+						<div class="btn-group large">
+							<div class="select select-link">
+								<strong class="sr-only">{{ strings['/biblica/templates/rtb/navigation/selectBookLabel'] }}</strong>
+								<select class="form-control" name="book-select">
+									<option value="" selected hidden disabled>{{ data.book.name }}</option>
+									{% for item in data.bookDropDownItems %}
+									<option value="{{ item.value }}">{{ item.text }}</option>
+									{% endfor %}
+				                </select>
+              				</div>
+						</div>
+
+						<div class="btn-group small">
+							<div class="select select-link">
+								<strong class="sr-only">{{ strings['/biblica/templates/rtb/navigation/selectChapterLabel'] }}</strong>
+								<select class="form-control" name="chapter-select">
+									<option value="" selected hidden disabled>{{ data.chapter.name }}</option>
+									{% for item in data.chapterDropDownItems %}
+									<option value="{{ item.value }}">{{ item.text }}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+					</div>
+
+					{% if data.showSearchForm %}
+					<form method="get" action="{{ data.bibleSearchUrl }}" role="form">
+						<div class="quick-search">
+							<div class="search">
+								<label class="sr-only" for="bible-keywords">{{ strings['Translate("/biblica/templates/rtb/search/queryLabel'] }}</label>
+								<input type="search" class="form-control autocomplete" data-acurl="/views/pages/readthebiblepages/autocomplete.ashx" name="q" id="bible-keywords" placeholder="{{ data.searchPlaceholder }}"/>
+								<input name="translationid" type="hidden" value="{{ data.searchTranslationId }}"/>
+								<button class="search-submit" aria-label="{{ strings['/biblica/templates/rtb/search/buttonLabel'] }}">
+									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="11" cy="11" r="6" stroke-width="2"/>
+										<path d="M20 20L15.5 15.5" stroke-width="2" stroke-linecap="round"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</form>
+					{% endif %}
+				</div>
+			</div>
+
+		<div class="bible-reader {{ data.primarySectionData.columns == 6 ? 'bible-reader-compared'}}">
+			<div class="row">
+				{% if data.showOsis %}
+					<div class="col col-md-12 single-verse-holder">
+						{% for passage in data.passages %}
+							{% if passage.audio|length > 0 %}
+								<div class="header clearfix">
+									<div class="version-selector clearfix">
+										<ul class="tools">
+											<li class="listen">
+												<a class="btn-rounded btn-bordered toggle-link" href="#listen-{{ loop.index }}" title="{{ strings['/biblica/templates/rtb/tools/listenLabel'] }}" aria-label="{{ strings['/biblica/templates/rtb/tools/listenLabel'] }}">
+													<svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path class="path-fill" d="M2.9158 14.3597C2.04434 12.9072 2.04434 11.0928 2.9158 9.64034V9.64034C3.18172 9.19712 3.62228 8.88665 4.12912 8.78529L6.19838 8.37144C6.32166 8.34678 6.43278 8.28066 6.51327 8.18408L9.04215 5.14942C10.4875 3.41501 11.2102 2.5478 11.8551 2.78129C12.5 3.01479 12.5 4.14364 12.5 6.40134L12.5 17.5987C12.5 19.8564 12.5 20.9852 11.8551 21.2187C11.2102 21.4522 10.4875 20.585 9.04215 18.8506L6.51327 15.8159C6.43278 15.7193 6.32166 15.6532 6.19838 15.6286L4.12912 15.2147C3.62228 15.1133 3.18173 14.8029 2.9158 14.3597V14.3597Z"></path>
+														<path class="path-stroke" d="M15.5989 7.67857C16.7391 8.81873 17.3824 10.3633 17.3888 11.9757C17.3952 13.5881 16.764 15.1377 15.6329 16.2868" stroke-width="2" stroke-linecap="round"></path>
+														<path class="path-stroke" d="M20.6362 5.08601C22.4604 6.91026 23.4898 9.38156 23.4999 11.9614C23.5101 14.5413 22.5003 17.0206 20.6904 18.8592" stroke-width="2" stroke-linecap="round"></path>
+													</svg>
+												</a>
+											</li>
+										</ul>
+									</div>
+
+									<div class="listen" id="listen-{{ loop.index }}" style="display: none;">
+										<audio class="bible-audio-player" data-bible-id="{{ data.audioBibleId }}" data-chapter-id="{{ passage.audio[0].osis }}" style="width:100%;" controls="controls"></audio>
+										<p class="audio-preloader">Loading...</p>
+									</div>
+								</div>
+							{% endif %}
+
+							<div class="single-verse">
+								<blockquote class="verse">
+									<p>
+										<cite>{{ passage.name }}</cite>
+									</p>
+									<div class="bible-api">
+										<div class="{{ data.bibleWrapperClasses }}">
+											{{ passage.osisContent|raw }}
+										</div>
+									</div>
+
+									{% if passage.footnotes|length > 0 %}
+										<hr>
+										<h5>{{ strings['/biblica/templates/rtb/footnotesHeading'] }}</h5>
+										<ol type="a">
+											{% for footnote in passage.footnotes %}
+												<li id="{{ footnote.id }}">
+													<a href="#{{ footnote.referenceId }}">{{ footnote.verse }}</a>
+													{{ footnote.content|raw }}
+												</li>
+											{% endfor %}
+										</ol>
+									{% endif %}
+
+									<p class="action">
+										{{ data.chapterLinks[passage.osis]|raw }}
+									</p>
+								</blockquote>
+							</div>
+
+						{% endfor %}
+					</div>
+				{% endif %}
+
+				{% if data.showMissingPassageText %}
+					<div class="single-verse">
+						<blockquote class="verse">
+							<div class="missing-content">{{ data.missingPassageText|raw }}</div>
+						</blockquote>
+					</div>
+				{%  endif %}
+
+				{{ include('bible-reader-section.twig', { sectionData: data.primarySectionData }) }}
+				{% if data.secondarySectionData != null %}
+					{{ include('bible-reader-section.twig', { sectionData: data.secondarySectionData }) }}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% if data.fumsTokens|length > 0 %}
+	<script>
+		window.fumsTokens = window.fumsTokens || [];{% for token in data.fumsTokens %}window.fumsTokens.push('{{ token }}');{% endfor %}
+	</script>
+{% endif %}{% endif %}

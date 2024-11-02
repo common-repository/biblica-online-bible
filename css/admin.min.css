@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+.jBox-Tooltip .jBox-content{background-color:var(--primary-alpha);border:solid 1px var(--primary);max-width:20em;padding:1em;border-radius:.3em;font-size:.8em}.jBox-Tooltip .jBox-pointer-top{top:1px;z-index:20000}.jBox-Tooltip .jBox-pointer-top.jBox-pointer::after{background-color:var(--primary-alpha);border-top:solid 1px var(--primary);border-left:solid 1px var(--primary)}.jBox-Tooltip .jBox-pointer-bottom{bottom:1px;z-index:20000}.jBox-Tooltip .jBox-pointer-bottom.jBox-pointer::after{background-color:var(--primary-alpha);border-right:solid 1px var(--primary);border-bottom:solid 1px var(--primary)}.jBox-Tooltip .jBox-pointer-right{right:1px;z-index:20000}.jBox-Tooltip .jBox-pointer-right.jBox-pointer::after{background-color:var(--primary-alpha);border-top:solid 1px var(--primary);border-right:solid 1px var(--primary)}.jBox-Tooltip .jBox-pointer-left{left:1px;z-index:20000}.jBox-Tooltip .jBox-pointer-left.jBox-pointer::after{background-color:var(--primary-alpha);border-bottom:solid 1px var(--primary);border-left:solid 1px var(--primary)}.jBox-Tooltip .jBox-content .fr{font-weight:700}.jBox-Tooltip .jBox-content .fq,.jBox-Tooltip .jBox-content .fqa,.jBox-Tooltip .jBox-content .tl{font-style:italic}
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+.settings-help-icon{cursor:pointer;margin-left:5px;font-weight:400;font-size:18px}.clear-bible-cache-result{margin-left:10px;line-height:50px}button.clear-bible-cache-button.button-secondary{margin:10px 0}.jBox-Tooltip .jBox-content{font-size:1em}
+/*# sourceMappingURL=admin.min.css.map */

@@ -1,0 +1,25 @@
+{#
+# Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+# Licensed under MIT (https://opensource.org/licenses/MIT)
+#}
+<div class="wrap">
+
+    <h2>{{ strings['/admin/options/pageHeading'] }}</h2>
+
+    {% for message in data.messages %}
+        <div class="notice notice-{{ message.type }}{{ message.isDismissible ? ' is-dismissible' }}">
+            <p>{{ message.text }}</p>
+        </div>
+    {% endfor %}
+
+    <button type="button" class="clear-bible-cache-button button-secondary">{{ strings['/admin/options/clear-bible-cache-button/text'] }}</button> <span class="clear-bible-cache-result"></span>
+
+    <h2 class="nav-tab-wrapper">
+        {% for tab in data.tabs %}
+        <a href="?page=biblica-ob-options&tab={{ tab.id }}" class="nav-tab {{ data.currentTabId == tab.id ? 'nav-tab-active' }}">{{ tab.title }}</a>
+        {% endfor %}
+    </h2>
+
+    {{ data.form|raw }}
+
+</div>

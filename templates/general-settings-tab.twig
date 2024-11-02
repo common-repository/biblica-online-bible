@@ -1,0 +1,59 @@
+{#
+# Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+# Licensed under MIT (https://opensource.org/licenses/MIT)
+#}
+<form method="post" action="options.php">
+    {{ data.settingsFields|raw }}
+    <input type="hidden" name="biblica-ob-options[verifiedBibleApiKey]" value="{{ data.options['verifiedBibleApiKey'] }}">
+    <table class="form-table">
+        <tr valign="top">
+            <th scope="row">{{ strings['/admin/options/bibleApiKeyLabel'] }}</th>
+            <td>
+                <input type="text" style="min-width: 20em;" name="biblica-ob-options[bibleApiKey]" value="{{ data.options['bibleApiKey'] }}">
+                <span class="settings-help-icon" data-help-text="{{ strings['/admin/options/bibleApiKeyHelpText'] }}">&#128712;</span>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Reader</h2>
+    <table class="form-table">
+        <tr valign="top">
+            <th scope="row">{{ strings['/admin/options/bibleReaderPageIdLabel'] }}</th>
+            <td>
+                {{ data.bibleReaderPageDropDown|raw }}
+                <span class="settings-help-icon" data-help-text="{{ strings['/admin/options/bibleReaderPageIdHelpText'] }}">&#128712;</span>
+            </td>
+        </tr>
+
+        <tr valign="top">
+            <th scope="row">{{ strings['/admin/options/enablePolyglotLabel'] }}</th>
+            <td>
+                <input type="checkbox" name="biblica-ob-options[enablePolyglot]" value="true" {{ data.options['enablePolyglot'] ? 'checked' }}>
+                <span class="settings-help-icon" data-help-text="{{ strings['/admin/options/enablePolyglotHelpText'] }}">&#128712;</span>
+            </td>
+        </tr>
+
+        <tr valign="top">
+            <th scope="row">{{ strings['/admin/options/showReaderSearchFormLabel'] }}</th>
+            <td>
+                <input type="checkbox" name="biblica-ob-options[showReaderSearchForm]" value="true" {{ data.options['showReaderSearchForm'] ? 'checked' }}>
+                <span class="settings-help-icon" data-help-text="{{ strings['/admin/options/showReaderSearchFormHelpText'] }}">&#128712;</span>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Search</h2>
+    <table class="form-table">
+        <tr valign="top">
+            <th scope="row">{{ strings['/admin/options/bibleSearchPageIdLabel'] }}</th>
+            <td>
+                {{ data.bibleSearchPageDropDown|raw }}
+                <span class="settings-help-icon" data-help-text="{{ strings['/admin/options/bibleSearchPageIdHelpText'] }}">&#128712;</span>
+            </td>
+        </tr>
+    </table>
+
+    <p class="submit">
+        <input type="submit" class="button-primary" value="{{ strings['/admin/options/submitButton'] }}" />
+    </p>
+</form>

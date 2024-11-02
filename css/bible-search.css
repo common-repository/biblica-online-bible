@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+/* ---------------------------------------------------------
+  Search page styles
+  ---------------------------------------------------------*/
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+/* Bible search styles */
+#bible-search .content {
+  padding: 2em 0 0; }
+  @media (min-width: 768px) {
+    #bible-search .content {
+      padding: 4em 0 0; } }
+
+/* Search results styles */
+.search-results {
+  font-size: 1em; }
+  .search-results ul:not(.pagination) {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    .search-results ul:not(.pagination) > li {
+      padding-bottom: 1.12em;
+      margin-bottom: 1.12em;
+      border-bottom: 1px solid var(--secondary-light); }
+      @media (min-width: 768px) {
+        .search-results ul:not(.pagination) > li {
+          padding-bottom: 1.5em;
+          margin-bottom: 1.5em; } }
+    .search-results ul:not(.pagination) p,
+    .search-results ul:not(.pagination) h4 {
+      margin-bottom: 0.2em; }
+      .search-results ul:not(.pagination) p:last-child,
+      .search-results ul:not(.pagination) h4:last-child {
+        margin-bottom: 0; }
+    .search-results ul:not(.pagination) h4 {
+      font-family: "DM Sans", sans-serif;
+      font-weight: 500;
+      font-size: 1.8em;
+      line-height: 1.2; }
+      @media (min-width: 768px) {
+        .search-results ul:not(.pagination) h4 {
+          font-size: 2.4em; } }
+
+/* ---------------------------------------------------------
+  Styles for responsive breakpoints
+  ---------------------------------------------------------*/

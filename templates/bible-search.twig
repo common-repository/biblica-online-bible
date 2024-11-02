@@ -1,0 +1,90 @@
+{#
+# Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+# Licensed under MIT (https://opensource.org/licenses/MIT)
+#}
+{% if data.disabledMessage != null %}
+	<div class="disabled-message">{{ data.disabledMessage }}</div>
+{% else %}
+	<div class="x-main left" role="main" style="min-height: 500px;">
+		<div id="bible-search">
+			<div id="content-2" class="clearfix">
+				<div class="main-header main-header-secondary">
+					{% if data.heading != '' %}
+					<h1>{{ data.heading }}</h1>
+					{% endif %}
+					<form class="list-tools" method="get" role="form">
+						<div class="quick-search">
+							<div class="search">
+								<label class="sr-only" for="shop-keywords">{{ strings['/biblica/templates/search/quickSearch/label'] }}</label>
+								<input type="search" class="form-control" name="q" value="{{ data.query }}" id="shop-keywords" placeholder="{{ data.searchPlaceholder }}"/>
+								<input name="translationid" type="hidden" value="{{ data.translationId }}"/>
+								<button class="search-submit" aria-label="{{ strings['/biblica/templates/search/quickSearch/imageAltText'] }}">
+									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="11" cy="11" r="6" stroke-width="2"/>
+										<path d="M20 20L15.5 15.5" stroke-width="2" stroke-linecap="round"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+
+						<div class="sort">
+							<div class="select">
+								<label for="sortorder">{{ strings['/biblica/templates/search/sortLabel'] }}</label>
+								<select class="form-control auto-submit" name="sortby" id="sortorder">
+									{% for item in data.sortOrderDropDownItems %}
+										<option value="{{ item.value }}" {{ item.value == data.sortOrder ? 'selected="selected"' }}>{{ item.text }}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="content">
+					<div class="results-message">{{ data.resultsMessage|raw }}</div>
+					<div class="search-results">
+						<div class="m-a m-a-alt-4">
+							{% if data.totalResults > 0 %}
+								<ul>
+									{% for hit in data.searchHits %}
+										<li>
+											<h4 class="h5">
+												<a href="{{ hit.url }}">{{ hit.name }}</a>
+											</h4>
+											<p class="hit">{{ hit.content|raw }}</p>
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+						</div>
+						{% if data.showPageLinks %}
+							<div class="pagination-holder">
+								{% if data.previousPageLink != null %}
+									<a class="prev" href="{{ data.previousPageLink.url }}" aria-label="{{ strings['/biblica/templates/search/previousPageLabel'] }}">
+										<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M15.375 5.25L8.625 12L15.375 18.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								{% endif %}
+								<ul class="pagination">
+									{% for pageLink in data.pageLinks %}
+										<li {{data.currentPage == pageLink.text ? 'class="active"'}}>
+											<a href="{{ pageLink.url|raw }}">{{ pageLink.text }}</a>
+										</li>
+									{% endfor %}
+								</ul>
+								{% if data.nextPageLink != null %}
+									<a class="next" href="{{ data.nextPageLink.url }}" aria-label="{{ strings['/biblica/templates/search/nextPageLabel'] }}">
+										<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.625 5.25L15.375 12L8.625 18.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								{% endif %}
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endif %}

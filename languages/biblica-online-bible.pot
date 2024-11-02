@@ -1,0 +1,362 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-11-06T20:17:59-07:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: biblica-online-bible\n"
+
+#: Biblica/WordPress/Plugin/Common/SettingsTab.php:39
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:40
+msgid "-- Select --"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/Common/SettingsTab.php:40
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:29
+#: Biblica/WordPress/Plugin/OnlineBible/TranslationsSettingsTab.php:39
+msgid "Save Changes"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:65
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:93
+msgid "The Bible reader is not available right now. Please try again later."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:66
+msgid "Compare with…"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:67
+msgid "Hide this version"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:68
+msgid "Listen to this text"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:69
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReaderPassage.php:62
+msgid "Next chapter"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:70
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReaderPassage.php:63
+msgid "Next book"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:71
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReaderPassage.php:64
+msgid "Previous chapter"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:72
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReaderPassage.php:65
+msgid "Previous book"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:73
+msgid "Select book"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:74
+msgid "Select chapter"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:75
+msgid "Footnotes"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:76
+msgid "Cross-references"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:77
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:46
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:63
+msgid "Search the Bible"
+msgstr ""
+
+#. translators: abbreviation of the translation that will be searched (e.g. NIV)
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:78
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:44
+#: Biblica/WordPress/Plugin/OnlineBible/BibleWidget.php:46
+msgid "Search the %s Bible"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:79
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:45
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:47
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:51
+#: Biblica/WordPress/Plugin/OnlineBible/BibleWidget.php:44
+msgid "Search"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:80
+msgid "Bibeln"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:81
+msgid "There is no audio yet for this translation."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:82
+msgid "Scholar Notes"
+msgstr ""
+
+#. translators: 1: the book of the Bible where the verse is from 2: chapter number of the book where the verse is from
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:84
+msgid "Read More of %1$s %2$s"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:86
+msgid "This chapter is not currently available. Please try again later."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:87
+msgid "This chapter is not available yet in this translation."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:88
+msgid "Read the Bible online, in The New International Version (NIV), or a variety of other languages and translations."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:89
+msgid "Parallel Bible"
+msgstr ""
+
+#. translators: 1: abbreviation of the first side by side translation (e.g. NIV), 2: abbreviation of the second side by side translation (e.g. KJV)
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:91
+msgid "Read and compare the %1$s and %2$s Bible translations side by side with our %1$s/%2$s parallel Bible."
+msgstr ""
+
+#. translators: 1: abbreviation of the first side by side translation (e.g. NIV), 2: abbreviation of the second side by side translation (e.g. KJV)
+#: Biblica/WordPress/Plugin/OnlineBible/BibleReader.php:92
+msgid "The Bible reader is disabled. In order to use the Bible reader you must enter a valid key in the Bible API Key field in settings."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:42
+msgid "The Bible search page is not available right now. Please try again later."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:43
+msgid "No results were found. Please try a different search."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:48
+msgid "Site"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:49
+msgid "Store"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:50
+msgid "Bible"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:52
+msgid "Search within list"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:53
+msgid "Show All"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:54
+msgid "More Results"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:55
+msgid "More Products Results"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:56
+msgid "Sort:"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:57
+msgid "Filter Results"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:58
+msgid "Top {0} Results"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:59
+msgid "All {0} {1} Results"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:60
+msgid "Previous page"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:61
+msgid "Next page"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:62
+msgid "current"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:64
+msgid "hits on"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:65
+msgid "Relevance"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:66
+msgid "Book Order"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:67
+msgid "Bible search is disabled. In order to use the Bible search you must enter a valid key in the Bible API Key field in settings."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:68
+msgid "Bible search is disabled. In order to use the Bible search you must set the Bible Reader Page field in settings."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:69
+msgid "Bible search is not available right now. Please try again later."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleSearch.php:70
+msgid "Please enter the text you would like to search for."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleWidget.php:39
+msgid "Choose Bible version"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleWidget.php:40
+msgid "Book"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleWidget.php:41
+msgid "Chapter"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleWidget.php:42
+msgid "Go"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleWidget.php:43
+msgid "Get"
+msgstr ""
+
+#. translators: abbreviation of the translation that will be searched (e.g. NIV)
+#: Biblica/WordPress/Plugin/OnlineBible/BibleWidget.php:47
+msgid "The Bible widget is disabled. In order to use the Bible widget you must enter a valid key in the Bible API Key field in settings."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleWidget.php:48
+msgid "The Bible widget is disabled. In order to use the Bible widget you must set the Bible Reader Page field or the Bible Search Page field in settings."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/BibleWidget.php:49
+msgid "The Bible widget is not available right now. Please try again later."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:30
+msgid "Bible Reader Page"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:31
+msgid "Select the WordPress page where the Bible reader shortcode has been installed. Bible search results will link to this page."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:32
+msgid "Bible Search Page"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:33
+msgid "Select the WordPress page where the Bible search shortcode has been installed. Search boxes on the Bible reader and widget will link to this page."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:34
+msgid "Side-by-Side Translations"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:35
+msgid "Enable the display of two translations side-by-side."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:36
+msgid "Show Search Form"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:37
+msgid "Show a search box on the Bible reader."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:38
+msgid "Bible API Key"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/GeneralSettingsTab.php:39
+msgid "Enter the api key for your Api.Bible account. This plugin uses Bible text provided by Api.Bible and requires an Api.Bible account in order to function."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/OnlineBibleSettingsPage.php:46
+msgid "Biblica Online Bible Settings"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/OnlineBibleSettingsPage.php:47
+msgid "Clear Cache"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/OnlineBibleSettingsPage.php:48
+msgid "You must set the Bible API key in order to use this plugin. You may obtain an API key from https://scripture.api.bible/."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/OnlineBibleSettingsPage.php:49
+msgid "Your Bible API Key is invalid. Please make sure that you have entered it correctly. You may obtain an API key from https://scripture.api.bible/."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/TranslationsSettingsTab.php:29
+msgid "Default Translation"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/TranslationsSettingsTab.php:30
+msgid "The default Bible translation shown by the Bible reader and widget. You can only select from the Bible translations which have been enabled."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/TranslationsSettingsTab.php:31
+msgid "These are the translations provided by your Api.Bible account. Enable the translations you would like to be shown in the Bible reader and widget."
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/TranslationsSettingsTab.php:32
+msgid "Enabled"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/TranslationsSettingsTab.php:33
+msgid "Abbreviation"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/TranslationsSettingsTab.php:34
+msgid "Custom Abbrev"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/TranslationsSettingsTab.php:35
+msgid "ID"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/TranslationsSettingsTab.php:36
+msgid "Language"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/TranslationsSettingsTab.php:37
+msgid "Name"
+msgstr ""
+
+#: Biblica/WordPress/Plugin/OnlineBible/TranslationsSettingsTab.php:38
+msgid "Custom Name"
+msgstr ""

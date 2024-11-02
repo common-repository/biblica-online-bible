@@ -1,0 +1,22 @@
+{
+    "config": {
+        "platform": {
+            "php": "8.0.2"
+        }
+    },
+    "require": {
+        "monolog/monolog": "^2.9",
+        "guzzlehttp/guzzle": "^7.5",
+        "twig/twig": "^3.5",
+        "symfony/cache": "^6.0",
+        "pimple/pimple": "^3.5",
+        "ext-dom": "*",
+        "ext-intl": "*",
+        "ext-json": "*",
+        "ext-libxml": "*",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4": {"Biblica\\": "src/Biblica"}
+    }
+}

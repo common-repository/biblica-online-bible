@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+/* ---------------------------------------------------------
+  Bible widget styles
+  ---------------------------------------------------------*/
+/*!
+ * Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+/* Bible widget styles */
+#bible-widget {
+  font-family: "DM Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2; }
+  #bible-widget .row {
+    display: flex;
+    align-items: center;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-bottom: 8px; }
+    @media (min-width: 768px) {
+      #bible-widget .row {
+        margin-left: -8px;
+        margin-right: -8px;
+        margin-bottom: 24px; } }
+    #bible-widget .row > * {
+      padding-left: 4px;
+      padding-right: 4px; }
+      @media (min-width: 768px) {
+        #bible-widget .row > * {
+          padding-left: 8px;
+          padding-right: 8px; } }
+    #bible-widget .row .col-xs-auto {
+      flex-grow: 1; }
+  #bible-widget .form-group {
+    margin-bottom: 0; }
+    #bible-widget .form-group:first-child {
+      margin-bottom: 0; }
+  #bible-widget .search .form-control {
+    background-color: rgba(var(--white-rgb), 0.2);
+    color: var(--white); }
+    #bible-widget .search .form-control::placeholder {
+      color: var(--white); }
+  #bible-widget .search .submit {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%); }
+    #bible-widget .search .submit .btn {
+      padding: 0;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      background-color: transparent;
+      border-radius: 50%; }
+      #bible-widget .search .submit .btn:hover {
+        color: var(--white);
+        background-color: var(--primary); }
+      #bible-widget .search .submit .btn:active {
+        color: var(--white);
+        background-color: var(--primary-active); }
+      #bible-widget .search .submit .btn:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 2px 2px rgba(var(--primary-rgb), 0.4);
+        outline: none; }
+      #bible-widget .search .submit .btn svg {
+        stroke: currentColor; }
+  #bible-widget form {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--black); }
+    #bible-widget form:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 768px) {
+      #bible-widget form {
+        margin-bottom: 24px; }
+        #bible-widget form:last-child {
+          margin-bottom: 0; } }
+    #bible-widget form .btn-rounded {
+      width: 48px;
+      border-radius: 50%; }
+      @media (min-width: 768px) {
+        #bible-widget form .btn-rounded {
+          width: 56px; } }
+  #bible-widget .select.clip-text::after {
+    right: 52px; }
+    @media (min-width: 768px) {
+      #bible-widget .select.clip-text::after {
+        right: 56px; } }
+
+/* ---------------------------------------------------------
+  Styles for responsive breakpoints
+  ---------------------------------------------------------*/

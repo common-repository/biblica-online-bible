@@ -1,0 +1,73 @@
+{#
+# Copyright © 2022 by Biblica, Inc. (https://www.biblica.com)
+# Licensed under MIT (https://opensource.org/licenses/MIT)
+#}
+<form method="post" action="options.php">
+    {{ data.settingsFields|raw }}
+    <table class="form-table">
+        <tr>
+            <th scope="row">{{ strings['/admin/options/defaultTranslationIdLabel'] }}</th>
+            <td>
+                <select name="biblica-ob-translations[defaultTranslationId]">
+                    {% for item in data.translationDropDownItems %}
+                        <option value="{{ item.value }}" {{ item.selected ? 'selected' }}>{{ item.text|raw }}</option>
+                    {% endfor %}
+                </select>
+                <span class="settings-help-icon" data-help-text="{{ strings['/admin/options/defaultTranslationIdHelpText'] }}">&#128712;</span>
+            </td>
+        </tr>
+        <tr>
+            <th>Available Translations
+                <span class="settings-help-icon" data-help-text="{{ strings['/admin/options/availableTranslationsHelpText'] }}">&#128712;</span>
+            </th>
+            <td></td>
+        </tr>
+    </table>
+    <table class="wp-list-table widefat striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>{{ strings['/admin/options/translations/enabledColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/languageColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/idColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/abbreviationColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/customAbbreviationColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/nameColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/customNameColumnHeader'] }}</th>
+            </tr>
+        </thead>
+        <tbody class="the-list">
+        {% for translationId,translationInfo in data.translationInformation %}
+            <tr>
+                <td>{{ translationInfo['count'] }}</td>
+                <td>
+                    <input type="checkbox" name="biblica-ob-translations[translations][{{ translationId }}][enabled]" {{ translationInfo['enabled'] ? 'checked' }}>
+                </td>
+                <td>{{ translationInfo['language'] }}</td>
+                <td>{{ translationInfo['id'] }}</td>
+                <td>{{ translationInfo['abbreviation'] }}</td>
+                <td><input type="text" size="5" name="biblica-ob-translations[translations][{{ translationId }}][customAbbreviation]" value="{{ translationInfo['customAbbreviation'] }}"></td>
+                <td>{{ translationInfo['name'] }}</td>
+                <td><input type="text" size="25" name="biblica-ob-translations[translations][{{ translationId }}][customName]" value="{{ translationInfo['customName'] }}"></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th>{{ strings['/admin/options/translations/enabledColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/languageColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/idColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/abbreviationColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/customAbbreviationColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/nameColumnHeader'] }}</th>
+                <th>{{ strings['/admin/options/translations/customNameColumnHeader'] }}</th>
+                <th>Custom Name</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <p class="submit">
+        <input type="submit" class="button-primary" value="{{ strings['/admin/options/submitButton'] }}" />
+    </p>
+</form>
